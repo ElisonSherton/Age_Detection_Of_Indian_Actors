@@ -47,9 +47,10 @@ eg. You can load data from
 - **from_df**: If we have a pandas dataframe that holds the image names, then we can create an `ImageList` object which can then be used to create a DataBunch.
 
 - **from_folder**: If the structure of data is in the format similar to imagenet i.e. train and test folders are separate and train contains subfolder of each class which holds instances of images from that class, then this is the goto function for loading data.
-___
 
 Currently, we will create an ImageList object from csv file provided and also add a test set to it. Then we will create an ImageDataBunch from this list to feed the model.
+
+___
 
 ### Image Augmentation
 It is a technique in which the images are modified in some small way to create new images so that our model can learn from a new set of data in addition to the current set. This is a common technique which is used to expand our trainset in case we have limited training data or so. 
@@ -96,9 +97,19 @@ ___
 
 ## Results
  
-The classification accuracy was XXX
+The best classification accuracy that I could obtain on the testset was 88.23%.  The confusion matrix for the validation dataset looks as follows.
 
-Also, as on 28th Feb 2020, this was how my submission stood on the leaderboard.
-![]()
+![](cm.PNG)
+
+The matrix is pretty decent and we can make out that the classifier is able to successfully distinguish Young and Old faces apart substantially well which is good because the **across class variance** for young and old people's faces is pretty high. However, when it comes to Young and Middle-aged or Middle-aged and old people, the **across class variance** is pretty low i.e. there are many commonalities/overlaps between young & middle or middle & old aged people as compared to that between old & young people.
+
+![](most_confused_pairs.PNG)
+
+This corroborates with what I mentioned above.
+
+As on 28th Feb 2020, this was how my submission stood on the leaderboard.
+![](leaderboard.PNG)
 
 fastai is an easily comprehensible, conveniently applicable and substantially efficient library which helped me easily get into the top 10% of submissions in the competition. I recommend it to use for everyone especially for it's simplicity and efficiency.
+
+If you want to view the version of this notebook on Google Colab, [here](https://colab.research.google.com/drive/1ofJWchAqL8LKvnJ9SCUJuyg1GDAhRr9Q).
