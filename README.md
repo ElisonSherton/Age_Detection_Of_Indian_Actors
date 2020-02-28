@@ -3,7 +3,7 @@
 *This repo aims to create an image classifier to tell, given an image of an Indian Actor, whether s/he is young, middle-aged or old. fastai is used to build a CNN Classifier to accomplish this task. This classifier is built for making predictions on test images in [this hackathon](https://datahack.analyticsvidhya.com/contest/practice-problem-age-detection/).*
 ___
 
-**Problem**
+**About the dataset**
 
 Indian Movie Face database (IMFDB) is a large unconstrained face database consisting of 34512 images of 100 Indian actors collected from more than 100 videos. All the images are manually selected and cropped from the video frames resulting in a high degree of variability in terms of scale, pose, expression, illumination, age, resolution, occlusion, and makeup. IMFDB is the first face database that provides a detailed annotation of every image in terms of age, pose, gender, expression and type of occlusion that may help other face related applications. For more details about the data set, read [here](http://cvit.iiit.ac.in/projects/IMFDB/). Here's a glimpse at a few sample faces with their labels from the dataset.
 
